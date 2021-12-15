@@ -4,6 +4,7 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
     const { categories = [], setCurrentCategory, currentCategory } = props;
+
     useEffect(() => {
         document.title = capitalizeFirstLetter(currentCategory.name);
     }, [currentCategory]);
@@ -12,7 +13,7 @@ function Nav(props) {
         <header className = 'flex-row'>
             <h2>
                 <a data-testid='link' href='/'>
-                    <span role='img' aria-label='camera'> {" "}📸</span>{" "}
+                    <span role='img' aria-label='camera'> 📸</span> Oh Snap!
                 </a>
             </h2>
             <nav>
